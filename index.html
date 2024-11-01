@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <!-- Other head elements -->
+</head>
+<body>
+    <!-- Your HTML content -->
+
+    <!-- Include the external JavaScript file -->
+    <script src="metaTagGenerator.js"></script>
+    <script>
+        // Call the function to generate meta tags
+        generateMetaTags({
+            title: "Your Page Title",
+            description: "Your page description here",
+            keywords: "keyword1, keyword2, keyword3",
+            ogTitle: "Your Open Graph Title",
+            ogDescription: "Your Open Graph Description",
+            ogType: "website",
+            ogUrl: window.location.href,
+            ogImage: "https://example.com/image.jpg",
+            viewport: "width=device-width, initial-scale=1",
+            favicon: "https://example.com/favicon.ico"
+        });
+    </script>
+</body>
+</html>
