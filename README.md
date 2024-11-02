@@ -1,7 +1,7 @@
 # generateMetaTags [Generate Meta Tags] 
 ## Overview
 
-Meta Tag Generator is a lightweight JavaScript library designed to automatically generate meta tags and Open Graph tags for any HTML page. This tool simplifies the process of adding essential metadata to your web pages, enhancing SEO and social media sharing capabilities by @anupammo 
+Meta Tag Generator is a lightweight JavaScript library designed to automatically generate meta tags and Open Graph tags for any HTML page. This tool simplifies the process of adding essential metadata to your web pages, enhancing SEO and social media sharing capabilities. 
 
 <img src="https://github.com/user-attachments/assets/e1c17375-06a4-4148-b1a5-ba548b3b8e62" width="450"></img> 
 <img src="https://github.com/user-attachments/assets/02e70e86-d864-4afd-98fb-539da1d9ce0a" width="450"></img> 
