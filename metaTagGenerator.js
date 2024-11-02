@@ -11,7 +11,7 @@ function checkAndCreateMetaTags() {
         titleTag = document.createElement('title');
         titleTag.textContent = defaultTitle; // Replace with your desired title
         document.head.appendChild(titleTag);
-        console.log("⛔ Title tag created.");
+        console.log("💫 Title tag created.");
     } else {
         console.log("✅ Title tag exists.");
     }
@@ -23,7 +23,7 @@ function checkAndCreateMetaTags() {
         canonicalTag.setAttribute('rel', 'canonical');
         canonicalTag.setAttribute('href', defaultCanonicalURL); // Replace with your desired canonical URL
         document.head.appendChild(canonicalTag);
-        console.log("Canonical URL created.");
+        console.log("💫 Canonical URL created.");
     } else {
         console.log("✅ Canonical URL exists.");
     }
@@ -35,7 +35,7 @@ function checkAndCreateMetaTags() {
         metaDescriptionTag.setAttribute('name', 'description');
         metaDescriptionTag.setAttribute('content', defaultDescription); // Replace with your desired description
         document.head.appendChild(metaDescriptionTag);
-        console.log("Meta description created.");
+        console.log("💫 Meta description created.");
     } else {
         console.log("✅ Meta description exists.");
     }
