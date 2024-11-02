@@ -1,7 +1,7 @@
 # generateMetaTags [Generate Meta Tags] 
 ## Overview
 
-Meta Tag Generator is a lightweight JavaScript library designed to automatically generate meta tags and Open Graph tags for any HTML page. This tool simplifies the process of adding essential metadata to your web pages, enhancing SEO and social media sharing capabilities.
+Meta Tag Generator is a lightweight JavaScript library designed to automatically generate meta tags and Open Graph tags for any HTML page. This tool simplifies the process of adding essential metadata to your web pages, enhancing SEO and social media sharing capabilities by @anupammo 
 
 <img src="https://github.com/user-attachments/assets/e1c17375-06a4-4148-b1a5-ba548b3b8e62" width="450"></img> 
 <img src="https://github.com/user-attachments/assets/02e70e86-d864-4afd-98fb-539da1d9ce0a" width="450"></img> 
@@ -29,15 +29,25 @@ Meta Tag Generator is a lightweight JavaScript library designed to automatically
  
 > [!IMPORTANT] 
 > [`https://cdn.jsdelivr.net/gh/anupammo/generateMetaTags@main/metaTagGenerator.js`](https://cdn.jsdelivr.net/gh/anupammo/generateMetaTags@main/metaTagGenerator.js)
+> 
+> ```
+> <!-- Include the CDN -->
+> <script src="https://cdn.jsdelivr.net/gh/anupammo/generateMetaTags@main/metaTagGenerator.js"></script>
+> ```
 
 
 ### Manual 
 
 1. Include the `metaTagGenerator.js` file in your HTML document.
+   
+   ```
+   <!-- Include the external JavaScript file -->
+   <!-- <script src="metaTagGenerator.js"></script> -->
+   ```
 
-2. Call the `checkAndCreateMetaTags()` function to perform the checks.
+3. Call the `checkAndCreateMetaTags()` function to perform the checks.
 
-3. Review the results in the browser console.
+4. Review the results in the browser console.
  
 <img src="https://github.com/user-attachments/assets/6a3dd282-850e-461e-aabe-41c611e74474" width="450"></img> 
 
