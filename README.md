@@ -28,7 +28,7 @@ Meta Tag Generator is a lightweight JavaScript library designed to automatically
 ### CDN jsDelivr
  
 > [!IMPORTANT] 
-> [[`https://cdn.jsdelivr.net/gh/anupammo/html-structure-check@main/checkHTMLStructure.js`](https://cdn.jsdelivr.net/gh/anupammo/html-structure-check@main/checkHTMLStructure.js)](https://cdn.jsdelivr.net/gh/anupammo/generateMetaTags@main/metaTagGenerator.js)
+> [`https://cdn.jsdelivr.net/gh/anupammo/generateMetaTags@main/metaTagGenerator.js`](https://cdn.jsdelivr.net/gh/anupammo/generateMetaTags@main/metaTagGenerator.js)
 
 
 ### Manual 
