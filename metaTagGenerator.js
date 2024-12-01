@@ -2,7 +2,7 @@ function checkAndCreateMetaTags() {
     const defaultTitle = "Default Title";
     const defaultDescription = "Default description for the page.";
     const defaultCanonicalURL = window.location.href;
-    const imageURL = "image.jpg";
+    const imageURL = "meta-image.png";
     let ogImageURL = defaultCanonicalURL + imageURL;
 
     // Check for Title Tag
