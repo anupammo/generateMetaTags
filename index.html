@@ -4,77 +4,234 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <title>Meta Tag Generator</title>
+  <title>HTML Meta Tag Generator for Facebook, Twitter, X & Others</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body {
+        background-image: url('https://images.pexels.com/photos/2514035/pexels-photo-2514035.jpeg?auto=compress&cs=tinysrgb&w=1600');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+
+    .glass-effect {
+        background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+        backdrop-filter: blur(5px); /* Glass-like blur effect */
+        display: flex;
+    }
+    
+    textarea, input, select {
+        color: #ffffff !important;
+    }
+
+    select option {
+        color: #000 !important;
+    }
+
+    textarea::placeholder, input::placeholder {
+        color: #fff !important;
+    }
+
+    /* header {
+        background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    } */
+
+    /* BG Animation */
+        /* html, body {
+            height: 100%;
+        } */
+
+        /* body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: #111;
+            color: #f2f2f2;
+            font-family: sans-serif;
+            overflow: hidden;
+            position: relative;
+        } */
+
+        .lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            margin: auto;
+            width: 90vw;
+            display: flex;
+            justify-content: space-between; /* Distribute lines evenly */
+        }
+
+        .line {
+            position: relative;
+            width: 2px;
+            height: 100%;
+            background: transparent; /* Initially transparent */
+            animation: wave 10s ease-in-out infinite alternate;
+        }
+
+        .line::after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 15vh;
+            width: 100%;
+            top: -50%;
+            left: 0;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+            animation: drop 7s infinite, colorShift 5s infinite alternate;
+        }
+
+        /* Randomized animation durations for organic feel */
+        .line:nth-child(even)::after {
+            animation-duration: 6s, 5s;
+        }
+        .line:nth-child(odd)::after {
+            animation-duration: 9s, 8s;
+        }
+
+        /* Color-shifting gradient animations */
+        @keyframes colorShift {
+            0% {
+                background: linear-gradient(to bottom, rgba(255, 0, 0, 0) 0%, #FF4500 75%, #FF4500 100%);
+            }
+            50% {
+                background: linear-gradient(to bottom, rgba(0, 255, 0, 0) 0%, #32CD32 75%, #32CD32 100%);
+            }
+            100% {
+                background: linear-gradient(to bottom, rgba(0, 0, 255, 0) 0%, #1E90FF 75%, #1E90FF 100%);
+            }
+        }
+
+        /* Vertical drop animation */
+        @keyframes drop {
+            0% {
+                top: -50%;
+            }
+            100% {
+                top: 110%;
+            }
+        }
+
+        /* Horizontal wave motion */
+        @keyframes wave {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(10px); /* Horizontal shift */
+            }
+        }
+    </style>
 </head>
-<body>
-  <div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h1 class="lead text-center fs-1 my-5">Meta Tag Generator</h1>
-        </div>
+<body class="bg-dark text-white">
+    <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
     </div>
-    <div class="row">
-        <div class="col-md-6 col-12">
-            <div class="card border-0">
-                <div class="card-body px-5">
-                    <form id="metaForm">
-                        <div class="mb-3">
-                            <input type="text" id="url" class="form-control" placeholder="Enter URL for both Open Graph and Twitter">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" id="pageTitle" class="form-control" placeholder="Enter page title">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" id="metaDescription" class="form-control" placeholder="Enter description">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" id="ogImage" class="form-control" placeholder="Enter image URL for both Open Graph and Twitter">
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="mb-3">
-                                    <select id="ogType" class="form-select">
-                                        <option value="">Select Open Graph Type</option>
-                                        <option value="website">Website</option>
-                                        <option value="article" selected>Article</option>
-                                        <option value="profile">Profile</option>
-                                        <!-- <option value="book">Book</option>
-                                        <option value="audio">Audio</option>
-                                        <option value="video">Video</option> -->
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="mb-3">
-                                    <select id="twitterCard" class="form-select">
-                                        <option value="">Select X Card Type</option>
-                                        <option value="summary">Summary Card</option>
-                                        <option value="summary_large_image" selected>Large Summary Card</option>
-                                        <!-- <option value="profile">App Card</option>
-                                        <option value="book">Player Card</option> -->
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button type="button" class="btn btn-primary" onclick="generateMetaTags()">Generate</button>
-                        </div>
-                    </form>
+    <header>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8 col-md-6 col-12">
+                    <h1 class="lead fw-bold fs-3 px-5">
+                        <span><strong class="fw-bold d-block display-4">Meta Tag Generator</strong> for </span>
+                        <span>HTML, Facebook, Twitter, X & Others</span>                 
+                    </h1>
+                    <p class="lead px-5 mt-5">Create and customize HTML meta tags effortlessly with our Meta Tag Generator. Perfect for optimizing your content across platforms like Facebook, Twitter, X, and more. Boost your webpage visibility today!</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <img width="200" height="200" class="img-fluid rounded-circle d-block mx-auto my-4" src="generateMetaTags-logo.png" alt="Meta Tag Generator Logo" title="Meta Tag Generator Logo">
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-12">
-            <div class="card border-0">
-                <div class="card-body px-5">
-                    <textarea id="output" class="form-control mb-3" rows="10" placeholder="Generated Meta Tags:" readonly></textarea>
-                    <div class="d-grid gap-2">
-                        <button type="button" class="btn btn-primary" onclick="copyToClipboard()">Copy</button>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="card glass-effect border-0 my-5">
+                        <div class="card-body p-5">
+                            <form id="metaForm">
+                                <div class="mb-3">
+                                    <input type="text" id="url" class="form-control shadow-none bg-transparent" placeholder="Enter URL for both Open Graph and Twitter">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" id="pageTitle" class="form-control shadow-none bg-transparent" placeholder="Enter page title">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" id="metaDescription" class="form-control shadow-none bg-transparent" placeholder="Enter description">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" id="ogImage" class="form-control shadow-none bg-transparent" placeholder="Enter image URL for both Open Graph and Twitter">
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <select id="ogType" class="form-select shadow-none bg-transparent">
+                                                <option value="">Select Open Graph Type</option>
+                                                <option value="website">Website</option>
+                                                <option value="article" selected>Article</option>
+                                                <option value="profile">Profile</option>
+                                                <!-- <option value="book">Book</option>
+                                                <option value="audio">Audio</option>
+                                                <option value="video">Video</option> -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="mb-3">
+                                            <select id="twitterCard" class="form-select shadow-none bg-transparent">
+                                                <option value="">Select X Card Type</option>
+                                                <option value="summary">Summary Card</option>
+                                                <option value="summary_large_image" selected>Large Summary Card</option>
+                                                <!-- <option value="profile">App Card</option>
+                                                <option value="book">Player Card</option> -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button type="button" class="btn btn-outline-light" onclick="generateMetaTags()">Generate</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="card glass-effect border-0 my-5">
+                        <div class="card-body p-5">
+                            <textarea id="output" class="bg-transparent form-control shadow-none mb-3" rows="10" placeholder="Generated Meta Tags:" readonly></textarea>
+                            <div class="d-grid gap-2">
+                                <button type="button" class="btn btn-outline-light" onclick="copyToClipboard()">Copy</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-  </div>
+    </section>
+    <footer class="glass-effect text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-center my-3">GenerateMetaTags &copy; 2025-30 | <a class="nav-link d-inline" href="https://anupammondal.in" alt="Designed & Developed by Anupam Mondal" title="Designed & Developed by Anupam Mondal">Developed by — Anupam Mondal</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
