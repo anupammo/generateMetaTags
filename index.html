@@ -15,53 +15,63 @@
     </div>
     <div class="row">
         <div class="col-md-6 col-12">
-            <form id="metaForm">
-            <div class="mb-3">
-                <input type="text" id="url" class="form-control" placeholder="Enter URL for both Open Graph and Twitter">
-            </div>
-            <div class="mb-3">
-                <input type="text" id="pageTitle" class="form-control" placeholder="Enter page title">
-            </div>
-            <div class="mb-3">
-                <input type="text" id="metaDescription" class="form-control" placeholder="Enter description">
-            </div>
-            <div class="mb-3">
-                <input type="text" id="ogImage" class="form-control" placeholder="Enter image URL for both Open Graph and Twitter">
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="mb-3">
-                        <select id="ogType" class="form-select">
-                            <option value="">Select Open Graph Type</option>
-                            <option value="website">Website</option>
-                            <option value="article" selected>Article</option>
-                            <option value="profile">Profile</option>
-                            <!-- <option value="book">Book</option>
-                            <option value="audio">Audio</option>
-                            <option value="video">Video</option> -->
-                        </select>
-                    </div>
+            <div class="card border-0">
+                <div class="card-body px-5">
+                    <form id="metaForm">
+                        <div class="mb-3">
+                            <input type="text" id="url" class="form-control" placeholder="Enter URL for both Open Graph and Twitter">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="pageTitle" class="form-control" placeholder="Enter page title">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="metaDescription" class="form-control" placeholder="Enter description">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="ogImage" class="form-control" placeholder="Enter image URL for both Open Graph and Twitter">
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <select id="ogType" class="form-select">
+                                        <option value="">Select Open Graph Type</option>
+                                        <option value="website">Website</option>
+                                        <option value="article" selected>Article</option>
+                                        <option value="profile">Profile</option>
+                                        <!-- <option value="book">Book</option>
+                                        <option value="audio">Audio</option>
+                                        <option value="video">Video</option> -->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-3">
+                                    <select id="twitterCard" class="form-select">
+                                        <option value="">Select X Card Type</option>
+                                        <option value="summary">Summary Card</option>
+                                        <option value="summary_large_image" selected>Large Summary Card</option>
+                                        <!-- <option value="profile">App Card</option>
+                                        <option value="book">Player Card</option> -->
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="button" class="btn btn-primary" onclick="generateMetaTags()">Generate</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="col">
-                    <div class="mb-3">
-                        <select id="twitterCard" class="form-select">
-                            <option value="">Select X Card Type</option>
-                            <option value="summary">Summary Card</option>
-                            <option value="summary_large_image" selected>Large Summary Card</option>
-                            <!-- <option value="profile">App Card</option>
-                            <option value="book">Player Card</option> -->
-                        </select>
-                    </div>
-                </div>
             </div>
-            <!-- <div class="mb-3">
-                <input type="text" id="twitterCard" class="form-control" placeholder="Enter Twitter Card Type">
-            </div> -->
-            <button type="button" class="btn btn-primary" onclick="generateMetaTags()">Generate</button>
-            </form>
         </div>
         <div class="col-md-6 col-12">
-            <textarea id="output" class="form-control" rows="10" placeholder="Generated Meta Tags:" readonly></textarea>
+            <div class="card border-0">
+                <div class="card-body px-5">
+                    <textarea id="output" class="form-control mb-3" rows="10" placeholder="Generated Meta Tags:" readonly></textarea>
+                    <div class="d-grid gap-2">
+                        <button type="button" class="btn btn-primary" onclick="copyToClipboard()">Copy</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
   </div>
