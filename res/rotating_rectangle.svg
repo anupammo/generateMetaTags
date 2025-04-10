@@ -1,0 +1,19 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes slowRotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .rotating {
+      animation: slowRotate 15s linear infinite;
+      transform-origin: center;
+    }
+  </style>
+
+  <rect class="rotating" x="20" y="20" width="300" height="300" rx="20" ry="20" fill="#3367d1" />
+</svg>

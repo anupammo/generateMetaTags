@@ -12,7 +12,7 @@
     
     <!-- Open Graph / Facebook -->
     <meta property="og:url" content="https://anupammo.github.io/generateMetaTags/">
-    <meta property="og:type" content="article">
+    <meta property="og:type" content="Website">
     <meta property="og:title" content="Meta Tag Generator for HTML, Facebook, Twitter, X & Others">
     <meta property="og:description" content="Create and customize HTML meta tags effortlessly with our Meta Tag Generator. Perfect for optimizing your content across platforms like Facebook, Twitter, X, and more. Boost your webpage visibility today!">
     <meta property="og:image" content="https://anupammo.github.io/generateMetaTags/meta-tag-generator.png">
@@ -27,6 +27,13 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        .bg-brand {
+            background-color: #3367d1;
+        }
+
+        .text-brand {
+            color: #3367d1;
+        }
         /* color : #3367d1 */
         /* body {
             background-image: linear-gradient(100deg, rgb(255, 255, 255) 10%, rgb(0, 6, 47) 100%), linear-gradient(120deg, rgb(255, 65, 65) 30%, rgb(0, 28, 100) 110%), radial-gradient(100% 220% at 100% 0%, rgb(128, 0, 255) 0%, rgb(255, 255, 255) 30%, rgb(0, 160, 255) 100%), linear-gradient(60deg, rgb(34, 0, 242) 0%, rgb(83, 0, 0) 100%), linear-gradient(190deg, rgb(185, 0, 255) 0%, rgb(0, 136, 123) 90%), linear-gradient(180deg, rgb(252, 0, 0) 0%, rgba(0, 50, 255, 1) 75%), linear-gradient(220deg, rgba(255, 0, 250, 1) 0%, rgb(255, 223, 0) 70%), radial-gradient(80% 110% at 50% 0%, rgb(2, 1, 1) 0%, rgb(0, 52, 187) 100%);
@@ -36,10 +43,17 @@
         body {
             /* background: #3367d1; */
             background-color: #000;
-            background-image: url('https://images.pexels.com/photos/633409/pexels-photo-633409.jpeg?auto=compress&cs=tinysrgb&w=1200');
+            background-image: url('https://images.pexels.com/photos/633409/pexels-photo-633409.jpeg?auto=compress&cs=tinysrgb&w=800');
             background-size: contain;
             background-attachment: fixed;
-            background-position: top right;
+            background-position: bottom center;
+            background-repeat: no-repeat;
+        }
+
+        .svg-anim-square-bg {
+            background-image: url(./res/rotating_rectangle.svg);
+            background-size: contain;
+            background-position: center;
             background-repeat: no-repeat;
         }
 
@@ -51,8 +65,9 @@
         } */
 
         .glass-effect {
-            background: rgba(255, 255, 255, 0.1); /* Transparent white background */
-            backdrop-filter: blur(5px); /* Glass-like blur effect */
+            background-color: #000000bb;
+            /* background: rgba(255, 255, 255, 0.1); */
+            backdrop-filter: blur(5px);
             display: flex;
         }
         
@@ -70,96 +85,98 @@
     </style>
 </head>
 <body class="text-white">
-    <header>
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-lg-8 col-md-6 col-12">
-                    <h1 class="lead fw-bold fs-3 px-5">
-                        <span><strong class="fw-bold d-block display-4">Meta Tag Generator</strong> for </span>
-                        <span>HTML, Facebook, Twitter, X & Others</span>                 
-                    </h1>
-                    <p class="lead px-5 mt-5">Create and customize HTML meta tags effortlessly with our Meta Tag Generator. Perfect for optimizing your content across platforms like Facebook, Twitter, X, and more. Boost your webpage visibility today!</p>
-                </div>
-                <div class="col-lg-4 col-md-6 col-12">
-                    <img width="200" height="200" class="img-fluid rounded-circle d-block mx-auto my-4" src="generateMetaTags-logo.png" alt="Meta Tag Generator Logo" title="Meta Tag Generator Logo">
-                </div>
-            </div>
-        </div>
-    </header>
-    <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-12">
-                    <div class="card glass-effect border-0 my-5">
-                        <div class="card-body p-5">
-                            <form id="metaForm">
-                                <div class="mb-3">
-                                    <input type="text" id="url" class="form-control shadow-none bg-transparent" placeholder="Enter URL for both Open Graph and Twitter">
-                                </div>
-                                <div class="mb-3">
-                                    <input type="text" id="pageTitle" class="form-control shadow-none bg-transparent" placeholder="Enter page title">
-                                </div>
-                                <div class="mb-3">
-                                    <input type="text" id="metaDescription" class="form-control shadow-none bg-transparent" placeholder="Enter description">
-                                </div>
-                                <div class="mb-3">
-                                    <input type="text" id="ogImage" class="form-control shadow-none bg-transparent" placeholder="Enter image URL for both Open Graph and Twitter">
-                                </div>
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="mb-3">
-                                            <select id="ogType" class="form-select shadow-none bg-transparent">
-                                                <option value="">Select Open Graph Type</option>
-                                                <option value="website">Website</option>
-                                                <option value="article" selected>Article</option>
-                                                <option value="profile">Profile</option>
-                                                <!-- <option value="book">Book</option>
-                                                <option value="audio">Audio</option>
-                                                <option value="video">Video</option> -->
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="mb-3">
-                                            <select id="twitterCard" class="form-select shadow-none bg-transparent">
-                                                <option value="">Select X Card Type</option>
-                                                <option value="summary">Summary Card</option>
-                                                <option value="summary_large_image" selected>Large Summary Card</option>
-                                                <!-- <option value="profile">App Card</option>
-                                                <option value="book">Player Card</option> -->
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-grid gap-2">
-                                    <button type="button" class="btn btn-outline-light" onclick="generateMetaTags()">Generate</button>
-                                </div>
-                            </form>
-                        </div>
+    <div class="svg-anim-square-bg">
+        <header>
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-8 col-md-6 col-12">
+                        <h1 class="lead fw-bold fs-3 px-5">
+                            <span><strong class="fw-bold d-block display-4">Meta Tag Generator</strong> for </span>
+                            <span>HTML, Facebook, Twitter, X & Others</span>                 
+                        </h1>
+                        <p class="lead px-5 mt-4">Create and customize HTML meta tags effortlessly with our Meta Tag Generator. Perfect for optimizing your content across platforms like Facebook, Twitter, X, and more. Boost your webpage visibility today!</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">                      
+                        <img width="200" height="200" class="img-fluid rounded d-block border border-5 mx-auto my-3" src="generateMetaTags-logo.png" alt="Meta Tag Generator Logo" title="Meta Tag Generator Logo">
                     </div>
                 </div>
-                <div class="col-md-6 col-12">
-                    <div class="card glass-effect border-0 my-5">
-                        <div class="card-body p-5">
-                            <textarea id="output" class="bg-transparent form-control shadow-none mb-3" rows="10" placeholder="Generated Meta Tags:" readonly></textarea>
-                            <div class="d-grid gap-2">
-                                <button type="button" class="btn btn-outline-light" onclick="copyToClipboard()">Copy</button>
+            </div>
+        </header>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="card shadow glass-effect my-3">
+                            <div class="card-body p-5">
+                                <form id="metaForm">
+                                    <div class="mb-3">
+                                        <input type="text" id="url" class="form-control shadow-none bg-transparent" placeholder="Enter URL for both Open Graph and Twitter">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="pageTitle" class="form-control shadow-none bg-transparent" placeholder="Enter page title">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="metaDescription" class="form-control shadow-none bg-transparent" placeholder="Enter description">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="text" id="ogImage" class="form-control shadow-none bg-transparent" placeholder="Enter image URL for both Open Graph and Twitter">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="mb-3">
+                                                <select id="ogType" class="form-select shadow-none bg-transparent">
+                                                    <option value="">Select Open Graph Type</option>
+                                                    <option value="website">Website</option>
+                                                    <option value="article" selected>Article</option>
+                                                    <option value="profile">Profile</option>
+                                                    <!-- <option value="book">Book</option>
+                                                    <option value="audio">Audio</option>
+                                                    <option value="video">Video</option> -->
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="mb-3">
+                                                <select id="twitterCard" class="form-select shadow-none bg-transparent">
+                                                    <option value="">Select X Card Type</option>
+                                                    <option value="summary">Summary Card</option>
+                                                    <option value="summary_large_image" selected>Large Summary Card</option>
+                                                    <!-- <option value="profile">App Card</option>
+                                                    <option value="book">Player Card</option> -->
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-2">
+                                        <button type="button" class="btn btn-light" onclick="generateMetaTags()">Generate</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="card shadow glass-effect border-0 my-3">
+                            <div class="card-body p-5">
+                                <textarea id="output" class="bg-transparent form-control shadow-none mb-3" rows="10" placeholder="Generated Meta Tags:" readonly></textarea>
+                                <div class="d-grid gap-2">
+                                    <button type="button" class="btn btn-light" onclick="copyToClipboard()">Copy</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <footer class="glass-effect text-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <p class="text-center my-3">GenerateMetaTags &copy; 2025-30 | <a class="nav-link d-inline" href="https://anupammondal.in" alt="Designed & Developed by Anupam Mondal" title="Designed & Developed by Anupam Mondal">Developed by — Anupam Mondal</a></p>
+        </section>
+        <footer class="bg-brand text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-center my-3">GenerateMetaTags &copy; 2025-30 | <a class="nav-link d-inline" href="https://anupammondal.in" alt="Designed & Developed by Anupam Mondal" title="Designed & Developed by Anupam Mondal">Developed by — Anupam Mondal</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
