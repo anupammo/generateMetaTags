@@ -110,21 +110,21 @@
                             <div class="card-body p-5">
                                 <form id="metaForm">
                                     <div class="mb-3">
-                                        <input type="text" id="url" class="form-control shadow-none bg-transparent" placeholder="Enter URL for both Open Graph and Twitter">
+                                        <input type="text" id="url" placeholder="Page URL" class="form-control shadow-none bg-transparent border-bottom border-0 rounded-0">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" id="pageTitle" class="form-control shadow-none bg-transparent" placeholder="Enter page title">
+                                        <input type="text" id="pageTitle" placeholder="Page Title" class="form-control shadow-none bg-transparent border-bottom border-0 rounded-0">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" id="metaDescription" class="form-control shadow-none bg-transparent" placeholder="Enter description">
+                                        <input type="text" id="metaDescription" placeholder="Page Description" class="form-control shadow-none bg-transparent border-bottom border-0 rounded-0">
                                     </div>
                                     <div class="mb-3">
-                                        <input type="text" id="ogImage" class="form-control shadow-none bg-transparent" placeholder="Enter image URL for both Open Graph and Twitter">
+                                        <input type="text" id="ogImage" placeholder="Image URL" class="form-control shadow-none bg-transparent border-bottom border-0 rounded-0">
                                     </div>
                                     <div class="row">
                                         <div class="col">
                                             <div class="mb-3">
-                                                <select id="ogType" class="form-select shadow-none bg-transparent">
+                                                <select id="ogType" class="form-select shadow-none bg-transparent border-bottom border-0 rounded-0">
                                                     <option value="">Select Open Graph Type</option>
                                                     <option value="website">Website</option>
                                                     <option value="article" selected>Article</option>
@@ -137,7 +137,7 @@
                                         </div>
                                         <div class="col">
                                             <div class="mb-3">
-                                                <select id="twitterCard" class="form-select shadow-none bg-transparent">
+                                                <select id="twitterCard" class="form-select shadow-none bg-transparent border-bottom border-0 rounded-0">
                                                     <option value="">Select X Card Type</option>
                                                     <option value="summary">Summary Card</option>
                                                     <option value="summary_large_image" selected>Large Summary Card</option>
@@ -148,7 +148,7 @@
                                         </div>
                                     </div>
                                     <div class="d-grid gap-2">
-                                        <button type="button" class="btn btn-light" onclick="generateMetaTags()">Generate</button>
+                                        <button type="button" class="btn btn-outline-light rounded-0" onclick="generateMetaTags()">Generate</button>
                                     </div>
                                 </form>
                             </div>
@@ -157,9 +157,9 @@
                     <div class="col-md-6 col-12">
                         <div class="card shadow glass-effect border-0 my-3">
                             <div class="card-body p-5">
-                                <textarea id="output" class="bg-transparent form-control shadow-none mb-3" rows="10" placeholder="Generated Meta Tags:" readonly></textarea>
+                                <textarea id="output" rows="10" placeholder="Generated Meta Tags:" class="bg-transparent form-control shadow-none border-bottom border-0 rounded-0 mb-3" readonly></textarea>
                                 <div class="d-grid gap-2">
-                                    <button type="button" class="btn btn-light" onclick="copyToClipboard()">Copy</button>
+                                    <button type="button" class="btn btn-outline-light rounded-0" onclick="copyToClipboard()">Copy</button>
                                 </div>
                             </div>
                         </div>
@@ -167,7 +167,7 @@
                 </div>
             </div>
         </section>
-        <footer class="bg-brand text-white">
+        <footer class="bg-white text-dark">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
