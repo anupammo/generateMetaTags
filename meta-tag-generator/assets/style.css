@@ -1,0 +1,35 @@
+.mtg-meta-box {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+}
+
+.mtg-meta-box label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.mtg-meta-box input, .mtg-meta-box textarea, .mtg-meta-box select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.mtg-meta-box button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.mtg-meta-box button:hover {
+    background: #0056b3;
+}
