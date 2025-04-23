@@ -85,33 +85,11 @@
 </head>
 <body class="text-white">
     <div class="svg-anim-square-bg">
-        <header>
-            <div class="container py-5">
-                <div class="row">
-                    <div class="col-lg-8 col-md-6 col-12">
-                        <h1 class="lead fw-bold fs-4">
-                            <span><strong class="fw-bold d-block fs-1 mb-3">Meta Tag Generator</strong> for </span>
-                            <span>HTML, Facebook, Twitter, X & Others</span>                 
-                        </h1>
-                        <p class="lead fs-6 mt-4">Create and customize HTML meta tags effortlessly with our Meta Tag Generator. Perfect for optimizing your content across platforms like Facebook, Twitter, X, and more. Boost your webpage visibility today!</p>
-                        <div class="lead align-middle mt-4">
-                            <span class="flash-text d-inline-block display-4 me-3">
-                                <i class="bi bi-wordpress"></i>
-                            </span>
-                            <span class="d-inline-block fs-6">WordPress Plugin <br />available soon ..</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">                      
-                        <img width="250" height="250" class="img-fluid rounded d-block border border-5 mx-auto my-3" src="generateMetaTags-logo.png" alt="Meta Tag Generator Logo" title="Meta Tag Generator Logo">
-                    </div>
-                </div>
-            </div>
-        </header>
-        <section>
+        <header style="margin-top: 12vh;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-12">
-                        <div class="card shadow glass-effect my-3">
+                        <div class="card shadow glass-effect my-5">
                             <div class="card-body p-5">
                                 <form id="metaForm">
                                     <div class="mb-3">
@@ -153,26 +131,51 @@
                                         </div>
                                     </div>
                                     <div class="d-grid gap-2">
-                                        <button type="button" class="btn btn-outline-light rounded-0" onclick="generateMetaTags()">Generate</button>
+                                        <button type="button" class="btn btn-outline-light rounded-0" onclick="generateMetaTags()" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="bi bi-code-slash"></i> Generate Code</button>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-12">
-                        <div class="card shadow glass-effect border-0 my-3">
-                            <div class="card-body p-5">
+                        <img width="120" height="120" class="img-fluid rounded-circle d-block border border-5 mx-auto my-3" src="generateMetaTags-logo.png" alt="Meta Tag Generator Logo" title="Meta Tag Generator Logo">
+                        <h1 class="lead text-center fw-bold fs-4">
+                            <span><strong class="fw-bold d-block fs-1">Meta Tag Generator</strong> for </span>
+                            <span>HTML, Facebook, Twitter, X & Others</span>                 
+                        </h1>
+                        <p class="lead text-center fs-6 mt-4">Create and customize HTML meta tags effortlessly with our Meta Tag Generator. Perfect for optimizing your content across platforms like Facebook, Twitter, X, and more. Boost your webpage visibility today!</p>
+                        <div class="lead align-middle mx-auto mt-4" style="width: 220px;">
+                            <span class="flash-text d-inline-block display-4 me-3">
+                                <i class="bi bi-wordpress"></i>
+                            </span>
+                            <span class="d-inline-block fs-6">WordPress Plugin <br />available soon ..</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content glass-effect">
+                    <div class="modal-header">
+                        <button type="button" class="bg-white rounded-circle btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card bg-transparent shadow border-0 my-3">
+                            <div class="card-body p-0">
                                 <textarea id="output" rows="10" placeholder="Generated Meta Tags:" class="bg-transparent form-control shadow-none border-bottom border-0 rounded-0 mb-3" readonly></textarea>
                                 <div class="d-grid gap-2">
-                                    <button type="button" class="btn btn-outline-light rounded-0" onclick="copyToClipboard()">Copy</button>
+                                    <button type="button" class="btn btn-outline-light rounded-0" onclick="copyToClipboard()"><i class="bi bi-copy"></i> Copy Code</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <footer class="bg-white text-dark">
+        </div>                     
+        <!-- Modal -->
+        <footer class="bg-white text-dark fixed-bottom">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
