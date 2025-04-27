@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Primary Meta Tags -->
+    <title>Meta Tag Generator for HTML, Facebook, Twitter, X & Others</title>
+    <meta name="title" content="Meta Tag Generator for HTML, Facebook, Twitter, X & Others">
+    <meta name="description" content="Create and customize HTML meta tags effortlessly with our Meta Tag Generator. Perfect for optimizing your content across platforms like Facebook, Twitter, X, and more. Boost your webpage visibility today!">
+    <link rel="canonical" href="https://anupammo.github.io/generateMetaTags/">
+    <meta name="author" content="anupammo.github.io">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:url" content="https://anupammo.github.io/generateMetaTags/">
+    <meta property="og:type" content="Website">
+    <meta property="og:title" content="Meta Tag Generator for HTML, Facebook, Twitter, X & Others">
+    <meta property="og:description" content="Create and customize HTML meta tags effortlessly with our Meta Tag Generator. Perfect for optimizing your content across platforms like Facebook, Twitter, X, and more. Boost your webpage visibility today!">
+    <meta property="og:image" content="https://anupammo.github.io/generateMetaTags/meta-tag-generator.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://anupammo.github.io/generateMetaTags/">
+    <meta property="twitter:title" content="Meta Tag Generator for HTML, Facebook, Twitter, X & Others">
+    <meta property="twitter:description" content="Create and customize HTML meta tags effortlessly with our Meta Tag Generator. Perfect for optimizing your content across platforms like Facebook, Twitter, X, and more. Boost your webpage visibility today!">
+    <meta property="twitter:image" content="https://anupammo.github.io/generateMetaTags/meta-tag-generator.png">
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #f43f5e;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #94a3b8;
+            --success: #10b981;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            min-height: 100vh;
+            background-image: radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.15) 0%, transparent 50%);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+        }
+        
+        .form-control, .form-select {
+            background-color: rgba(15, 23, 42, 0.7);
+            border: 1px solid var(--glass-border);
+            color: var(--light) !important;
+            padding: 12px 16px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            background-color: rgba(15, 23, 42, 0.9);
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+        
+        .form-control::placeholder {
+            color: var(--gray) !important;
+            opacity: 1;
+        }
+        
+        select option {
+            color: var(--dark) !important;
+            background-color: var(--light);
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: var(--primary);
+        }
+        
+        .nav-pills .nav-link {
+            color: var(--light);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            font-size: 24px;
+            color: var(--primary);
+        }
+        
+        footer {
+            background: rgba(15, 23, 42, 0.8);
+            border-top: 1px solid var(--glass-border);
+            backdrop-filter: blur(12px);
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--glass);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+        
+        .social-icon:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-image {
+                max-width: 80%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <nav class="d-flex justify-content-between align-items-center mb-5">
+            <div class="d-flex align-items-center">
+                <img width="40" height="40" class="img-fluid rounded-circle me-2" src="generateMetaTags-logo.png" alt="Meta Tag Generator Logo">
+                <span class="fs-5 fw-bold">MetaGen</span>
+            </div>
+            <div>
+                <button class="btn btn-outline-primary me-2">Docs</button>
+                <button class="btn btn-primary">API</button>
+            </div>
+        </nav>
+        
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="glass-card p-5 mb-5">
+                    <h2 class="mb-4">Generate Meta Tags</h2>
+                    <form id="metaForm">
+                        <div class="mb-4">
+                            <label for="url" class="form-label">Page URL</label>
+                            <input type="text" id="url" placeholder="https://example.com/page" class="form-control">
+                        </div>
+                        <div class="mb-4">
+                            <label for="pageTitle" class="form-label">Page Title</label>
+                            <input type="text" id="pageTitle" placeholder="My Awesome Page" class="form-control">
+                        </div>
+                        <div class="mb-4">
+                            <label for="metaDescription" class="form-label">Description</label>
+                            <textarea id="metaDescription" rows="2" placeholder="A brief description of your page content" class="form-control"></textarea>
+                        </div>
+                        <div class="mb-4">
+                            <label for="ogImage" class="form-label">Image URL</label>
+                            <input type="text" id="ogImage" placeholder="https://example.com/image.jpg" class="form-control">
+                        </div>
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label for="ogType" class="form-label">Open Graph Type</label>
+                                <select id="ogType" class="form-select">
+                                    <option value="">Select Type</option>
+                                    <option value="website">Website</option>
+                                    <option value="article" selected>Article</option>
+                                    <option value="profile">Profile</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="twitterCard" class="form-label">X Card Type</label>
+                                <select id="twitterCard" class="form-select">
+                                    <option value="">Select Card Type</option>
+                                    <option value="summary">Summary Card</option>
+                                    <option value="summary_large_image" selected>Large Summary Card</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary w-100 py-3 fw-bold" onclick="generateMetaTags()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <i class="bi bi-magic me-2"></i> Generate Meta Tags
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="pulse-animation me-3">
+                        <div class="feature-icon">
+                            <i class="bi bi-wordpress"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="mb-1">WordPress Plugin</h5>
+                        <p class="text-muted mb-0">Coming soon in Q2 2025</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="text-center mb-4">
+                    <h1 class="display-4 fw-bold mb-3">
+                        <span class="text-gradient">Meta Tag</span> Generator
+                    </h1>
+                    <p class="lead mb-4">Optimize your content for social media and search engines with perfectly formatted meta tags.</p>
+                </div>
+                
+                <div class="glass-card p-4 mb-4 floating">
+                    <div class="d-flex">
+                        <div class="feature-icon me-3">
+                            <i class="bi bi-share"></i>
+                        </div>
+                        <div>
+                            <h5>Social Media Ready</h5>
+                            <p class="text-muted mb-0">Generate tags for Facebook, Twitter/X, LinkedIn and more.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-4 mb-4 floating" style="animation-delay: 0.5s;">
+                    <div class="d-flex">
+                        <div class="feature-icon me-3">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <div>
+                            <h5>SEO Optimized</h5>
+                            <p class="text-muted mb-0">Improve your search engine visibility with proper metadata.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-4 floating" style="animation-delay: 1s;">
+                    <div class="d-flex">
+                        <div class="feature-icon me-3">
+                            <i class="bi bi-clipboard-check"></i>
+                        </div>
+                        <div>
+                            <h5>Validation Included</h5>
+                            <p class="text-muted mb-0">Automatic validation ensures your tags meet platform requirements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content glass-card border-0">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="staticBackdropLabel">Generated Meta Tags</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-4">
+                        <textarea id="output" rows="10" class="form-control font-monospace" readonly></textarea>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button type="button" class="btn btn-outline-primary" onclick="copyToClipboard()">
+                            <i class="bi bi-copy me-2"></i> Copy to Clipboard
+                        </button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                            <i class="bi bi-check-circle me-2"></i> Done
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="py-4 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0">GenerateMetaTags &copy; 2025-30 | <a class="text-decoration-none" href="https://anupammondal.in">Developed by Anupam Mondal</a></p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="d-flex justify-content-center justify-content-md-end gap-3">
+                        <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
