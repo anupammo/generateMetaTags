@@ -206,7 +206,8 @@
         }
         
         .social-icon:hover {
-            background: var(--violet-600);
+            background: #fff;
+            /* background: var(--violet-600); */
             transform: translateY(-4px) scale(1.1);
             box-shadow: 0 4px 20px rgba(168, 85, 247, 0.3);
         }
@@ -250,13 +251,27 @@
     <div class="container py-5">
         <nav class="d-flex justify-content-between align-items-center mb-5">
             <div class="d-flex align-items-center">
-                <img width="48" height="48" class="img-fluid rounded-circle me-3" src="generateMetaTags-logo.png" alt="Meta Tag Generator Logo">
-                <span class="fs-4 fw-bold" style="font-family: 'Playfair Display', serif;">MetaGen Pro</span>
+                <img width="90" height="90" class="img-fluid rounded-circle me-3" src="generateMetaTags-logo.png" alt="Meta Tag Generator Logo">
+                <span class="fs-4 fw-bold" style="font-family: 'Playfair Display', serif;">Generate Meta Tags</span>
             </div>
-            <div>
+            <a class="nav-link" title="Meta Tags SEO WordPress Plugin : Anupam Mondal" 
+            href="https://wordpress.org/plugins/meta-tags-seo/" target="_blank">
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="pulse-animation me-4">
+                        <div class="feature-icon rounded-circle">
+                            <i class="bi bi-wordpress"></i>
+                        </div>
+                    </div>
+                    <div style="margin-top: -20px;">
+                        <h5 class="mb-1">Meta Tags SEO</h5>
+                        <p class="text-violet-300 mb-0">WordPress Plugin</p>
+                    </div>
+                </div>
+            </a>
+            <!-- <div>
                 <button class="btn btn-outline-primary me-3 px-4">Docs</button>
                 <button class="btn btn-primary px-4">API</button>
-            </div>
+            </div> -->
         </nav>
         
         <div class="row align-items-center">
@@ -304,23 +319,11 @@
                         </button>
                     </form>
                 </div>
-                
-                <div class="d-flex align-items-center justify-content-center">
-                    <div class="pulse-animation me-4">
-                        <div class="feature-icon">
-                            <i class="bi bi-wordpress"></i>
-                        </div>
-                    </div>
-                    <div>
-                        <h5 class="mb-1">WordPress Plugin</h5>
-                        <p class="text-violet-300 mb-0">Coming soon in Q2 2025</p>
-                    </div>
-                </div>
             </div>
             
             <div class="col-lg-6">
                 <div class="text-center mb-5">
-                    <h1 class="display-3 fw-bold mb-4">
+                    <h1 class="display-5 fw-bold mb-4">
                         <span class="text-gradient">Elevate Your</span><br>
                         <span class="text-gradient">Online Presence</span>
                     </h1>
@@ -391,18 +394,17 @@
         </div>
     </div>
     
-    <footer class="py-5 mt-5">
+    <footer class="py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
-                    <p class="mb-0" style="color: var(--violet-300);">GenerateMetaTags &copy; 2025-30 | <a class="text-decoration-none" href="https://anupammondal.in" style="color: var(--violet-200);">Developed by Anupam Mondal</a></p>
+                    <p class="mb-0" style="color: var(--violet-300);">GenerateMetaTags &copy; 2025 | <a class="text-decoration-none" href="https://anupammondal.in" style="color: var(--violet-200);">Developed by Anupam Mondal</a></p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <div class="d-flex justify-content-center justify-content-md-end gap-3">
-                        <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
-                        <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="social-icon"><i class="bi bi-discord"></i></a>
+                        <a href="https://github.com/anupammo" class="social-icon"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/anupammondal/" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://profiles.wordpress.org/anupamwp/" class="social-icon"><i class="bi bi-wordpress"></i></a>
                     </div>
                 </div>
             </div>
